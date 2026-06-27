@@ -1,0 +1,21 @@
+a1 = 1
+b2 = 10
+c3 = 100
+d4 = 'x'
+e5 = 'z'
+f6 = '0'
+g7 = '*'
+
+print(a1+b2)
+
+print(b2*1000)
+
+print(1000/a1)
+
+print(d4+g7)
+
+print(d4+f6)
+
+print(f6*b2)
+
+print(d4*c3,g7*c3)
