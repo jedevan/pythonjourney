@@ -1,0 +1,30 @@
+print("\"Hello World\"")
+
+print("\f")
+
+a="a\n4\n6\n8\n10"
+
+print(a)
+
+print("\f")
+
+x="*n**\n***\n****\n*****"
+
+print(x)
+
+print("\f")
+
+w="\t\t\tGreen\n\t\tYellow\t\tBlue\n\tOrange\t\t\t\tIndigo\nRed\t\t\t\t\t\tViolet"
+
+print(w)
+
+print("\f")
+
+print("\U0001F600")
+
+print("\f")
+
+character = 'z'
+ascii_value = ord(character)
+print(f"The ASCII value of '{character}' is {ascii_value}") 
+print(f"The ASCII {ascii_value} is this character '{character}'")
