@@ -1,0 +1,14 @@
+name = "Jed Evan A. Cagulada"
+section = "ICT-105"
+
+x = 128
+y = 76
+
+sum = x + y
+diff = x - y
+mult = x * y
+divd = x / y
+
+print(f"{name}\n{section}")
+print(f"\nx: {x} y: {y}")
+print(f"\nSum: {sum}\nDifference: {diff}\nProduct: {mult}\nQuotient: {divd:.2f}")
