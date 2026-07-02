@@ -1,0 +1,82 @@
+result_month = ' '
+result_day = ' '
+	
+try:
+	user_month = input("Enter your birth month: ")
+	user_day = int(input("Enter your birth day: "))
+	
+	match user_month:
+		case "January":
+			if (1 <= user_day <= 19):
+				print("Your Zodiac sign is Capricornus (Goat)")
+			elif (20 <= user_day <= 31):
+				print("Your Zodiac is Aquarius (Water bearer)")
+
+		case "February":
+			if (1 <= user_day <= 18):
+				print("Your Zodiac sign is Aquarius(Water bearer)")
+			elif (19 <= user_day <= 18):
+				print("Your Zodiac is Pisces (Fish)")
+
+		case "March":
+			if (1 <= user_day <= 20):
+				print("Your Zodiac sign is Pisces (Fish)")
+			elif (21 <= user_day <= 31):
+				print("Your Zodiac is Aries (Ram)")
+		
+		case "April":
+			if (1 <= user_day <= 19):
+				print("Your Zodiac sign is Aries (Ram)")
+			elif (20 <= user_day <= 30):
+				print("Your Zodiac is Taurus (Bull)")
+
+		case "May":
+			if (1 <= user_day <= 20):
+				print("Your Zodiac sign is Taurus (Bull)")
+			elif (21 <= user_day <= 31):
+				print("Your Zodiac is Gemini (Twins)")
+
+		case "June":
+			if (1 <= user_day <= 21):
+				print("Your Zodiac sign is Gemini (Twins)")
+			elif (22 <= user_day <= 30):
+				print("Your Zodiac is Cancer (Crab)")
+
+		case "July":		
+			if (1 <= user_day <= 22):
+				print("Your Zodiac sign is Cancer (Crab)")
+			elif (19 <= user_day <= 18):
+				print("Your Zodiac is Leo (Lion)")
+
+		case "August":
+			if (1 <= user_day <= 22):
+				print("Your Zodiac sign is Leo (Lion)")
+			elif (23 <= user_day <= 30):
+				print("Your Zodiac is Virgo (Virgin)")
+
+		case "September":
+			if (1 <= user_day <= 22):
+				print("Your Zodiac sign is Virgo (Virgin)")
+			elif (23 <= user_day <= 30):
+				print("Your Zodiac is Libra (Balance)")
+
+		case "October":
+			if (1 <= user_day <= 23):
+				print("Your Zodiac sign is Libra (Balance)")
+			elif (24 <= user_day <= 31):
+				print("Your Zodiac is Scorpius (Scorpion)")
+
+		case "November":
+			if (1 <= user_day <= 21):
+				print("Your Zodiac sign is Scorpius (Scorpion)")
+			elif (22 <= user_day <= 30):
+				print("Your Zodiac is Sagittarius (Archer)")
+
+		case "December":
+			if (1 <= user_day <= 21):
+				print("Your Zodiac sign is Saggitarius (Archer)")
+			elif (22 <= user_day <= 31):
+				print("Your Zodiac is Capricornus (Goat)")
+
+except ValueError:
+	print("Invalid Input")
