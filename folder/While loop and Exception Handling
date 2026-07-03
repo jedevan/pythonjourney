@@ -1,0 +1,24 @@
+user_string = ""
+user_char = ""
+
+isRunning = "y"
+
+try:	
+	while (isRunning.lower() == "y"):
+		while(not user_string.isalpha()):
+			user_string = str(input("\fEnter a string: "))
+	
+		while (len(user_char) == 0) or (len(user_char) > 1) and (user_char.isalpha()):	
+			user_char = str(input("Enter a character: "))
+
+		if user_char.lower() in user_string.lower():
+			print("Character \"{}\" is in the string.".format(user_char))
+		else:
+			print("Character \"{}\" is not in the string.".format(user_char))
+		
+		isRunning = input("Repeat Program? (y/n): ")
+		user_char = ""	
+		user_string = ""
+	
+except ValueError:
+	print("Invalid Input")
