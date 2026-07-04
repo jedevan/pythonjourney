@@ -1,0 +1,20 @@
+repeat = str(input("Do you want check for the average?(y/n): "))
+while repeat.lower() == "y":
+
+	mylist = [4, 7, 9, 2, 5, 1,]
+
+	try:	
+		total = 0
+		i = 0
+
+		while i < len(mylist):
+			total +=mylist[i]
+			i+=1
+	
+		avg = total / len(mylist)
+		print("Average:", avg)
+
+		repeat = input("Do you want to repeat? (Y/N): ")	
+	
+	except ZeroDivisionError:
+		print("Cannot divide by 0")
