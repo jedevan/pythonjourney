@@ -1,0 +1,28 @@
+user_input = "" 
+total = 0
+numberList = []
+i = 0
+
+
+while True:
+	try:
+		while i != 10:
+			user_input = int(input(f"Enter a number {i+1}: "))
+			i += 1
+			total += user_input
+			numberList.append(user_input)
+
+		average = total / 10
+		print(f"The average of the numbers is: {average}")
+
+		i = 0
+
+		programRetry = input("Would you like to repeat? (y/n)")
+
+		if programRetry.casefold() != "y":
+			print("Program ended")
+			programRetry = ""
+			break
+
+	except ValueError:
+		print("Invalid Integer")
