@@ -1,0 +1,19 @@
+again = input("Do you want to start the program?(y/n): ")
+while again.lower() == "y":
+	try:
+		ask = int(input("Enter the length of your Fibonacci Sequence?: "))
+		
+		if ask <= 0:
+			print("Please enter a positive number")
+		
+		else:	
+			a, b = 0, 1
+			print("Fibonacci Sequence: ")
+			for i in range(ask):
+				print(a, end=" ")
+				a, b = b, a + b
+		print()
+		again = input("Would you like to repeat?(y/n): ")
+	
+	except ValueError:
+		print("invalid Input")
