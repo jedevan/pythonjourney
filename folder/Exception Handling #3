@@ -1,0 +1,71 @@
+def titlePage():
+	print("-"*6, "CALCULATOR", "-"*6)
+	print("\n[1] Addition\n[2] Subtraction\n[3] Multiplication\n[4] Division\n[0] Exit\n")
+
+def addition(x, y):
+	sum = x + y
+	return sum
+
+def subtraction(x, y):
+	diff = x - y
+	return diff
+
+def multiplication(x, y):
+	product = x * y
+	return product
+
+def division(x, y):
+	quotient = x / y
+	return quotient
+
+choice = -99
+
+try:
+	while choice != 0:
+		titlePage()
+		choice = int(input("CHOICE: "))
+		match choice:
+			case 0: # EXIT
+				break
+			case 1: # ADDITION
+				print("-"*6, "ADDITION", "-"*6)
+				x = int(input("Enter First Number: "))
+				y = int(input("Enter Second Number: "))
+				sum = addition(x, y)
+				print(f"The sum of {x} and {y} is {sum}\n")
+			case 2: # SUBTRACTION
+				print("-"*6, "SUBTRACTION", "-"*6)
+				x = int(input("Enter First Number: "))
+				y = int(input("Enter Second Number: "))
+				diff = subtraction(x, y)
+				print(f"The difference of {x} and {y} is {diff}\n")
+			case 3: # MULTIPLICATION
+				print("-"*6, "MULTIPLICATION", "-"*6)
+				x = int(input("Enter First Number: "))
+				y = int(input("Enter Second Number: "))
+				product = multiplication(x, y)
+				print(f"The product of {x} and {y} is {product}\n")
+			case 4: # DIVISION
+				print("-"*6, "DIVISION", "-"*6)
+				x = int(input("Enter First Number: "))
+				y = int(input("Enter Second Number: "))
+				quotient = division(x, y)
+				print(f"The quotient of {x} and {y} is {quotient}\n")
+			case _:
+				print("Invalid Choice")
+		retry = input("Do you want to try again? (y/n): ")
+		if retry.lower() == "n":
+			break
+		elif retry.lower() == "y":
+			continue
+		else:
+			print("Invalid Choice... Exiting Program")
+			break
+	
+
+	print("\t\nThank you for using Calculator")
+
+except ValueError:
+	print("Invalid Value")
+except ZeroDivisionError:
+	print("Cannot divide by zero. Try again.")
