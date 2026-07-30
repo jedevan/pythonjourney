@@ -1,0 +1,213 @@
+"""
+Group:
+Ned Basilio - ned, nedtitle
+George Cheng - george
+Jed Cagulada - cagulada
+Allistor - broadney
+Lord Rodpeh Leon S. Dela Cruz - phredro
+"""
+
+import nedtitle # title
+import ned # pasta
+import george # drinks
+import broadney # meals
+import cagulada # dessert
+import phedro # burger
+
+#Global Variables
+
+menu_prices = []
+user_choice = 0
+retry = 99
+
+# Functions
+
+def calculate_order():
+	global menu_prices
+	global user_choice
+
+	order_quantity = int(input("Quantity?: "))
+	total_price = menu_prices[user_choice] * order_quantity
+	print(f"Your order total is: {total_price:,.2f}")
+	user_cash = int(input("Amount Tendered: "))
+	user_change = user_cash - total_price
+
+	if user_change >= 0:
+		print(f"Your change is Php {user_change:,.2f}")
+	else:
+		print("Not enough cash. Try again.")
+
+# Main Code
+
+
+
+while True:
+	nedtitle.titlepage()
+	try:
+		user_menu = int(input("CHOICE: "))
+
+	except ValueError:
+		print("Invalid Input.")
+	
+	match (user_menu):
+		case 0: # Exit
+			print("Thank you for visiting Spoonky Restaurant")
+			break
+		case 1: # Meals
+			while True:
+				broadney.meals()
+				menu_prices = broadney.menu_prices 
+				try:
+					menu_choice = input("CHOICE: ")
+					match menu_choice.upper():
+						case 'A':
+							user_choice = 0
+							calculate_order()
+						case 'B':
+							user_choice = 1
+							calculate_order()
+						case 'C':
+							user_choice = 2
+							calculate_order()
+						case 'D':
+							user_choice = 3
+							calculate_order()
+					retry = input("Would you like to try again? (y/n): ")
+					if retry.lower() == 'y':
+						continue
+					elif retry.lower() == 'n':
+						break
+					else:
+						print("Invalid Input")
+						break
+					retry = -99
+
+
+				except ValueError:
+					print("Invalid Choice")
+		case 2: #pasta
+			while True:
+				ned.pasta()
+				menu_prices = ned.menu_prices
+				try:
+					menu_choice = input("CHOICE: ")
+					match menu_choice.upper():
+						case 'A':
+							user_choice = 0
+							calculate_order()
+						case 'B':
+							user_choice = 1
+							calculate_order()
+						case 'C':
+							user_choice = 2
+							calculate_order()
+						case 'D':
+							user_choice = 3
+							calculate_order()
+					retry = input("Would you like to try again? (y/n): ")
+					if retry.lower() == 'y':
+						continue
+					elif retry.lower() == 'n':
+						break
+					else:
+						print("Invalid Input")
+						break
+					retry = -99
+				except ValueError:
+					print("Invalid Choice")
+		case 3: # burger
+			while True:
+				phedro.burger()
+				menu_prices = phedro.menu_prices
+				try:
+					menu_choice = input("CHOICE: ")
+					match menu_choice.upper():
+						case 'A':
+							user_choice = 0
+							calculate_order()
+						case 'B':
+							user_choice = 1
+							calculate_order()
+						case 'C':
+							user_choice = 2
+							calculate_order()
+						case 'D':
+							user_choice = 3
+							calculate_order()
+					retry = input("Would you like to try again? (y/n): ")
+					if retry.lower() == 'y':
+						continue
+					elif retry.lower() == 'n':
+						break
+					else:
+						print("Invalid Input")
+						break
+					retry = -99
+
+
+				except ValueError:
+					print("Invalid Choice")
+		case 4: # dessert
+			while True:
+				cagulada.desserts()
+				menu_prices = cagulada.menu_prices
+				try:
+					menu_choice = input("CHOICE: ")
+					match menu_choice.upper():
+						case 'A':
+							user_choice = 0
+							calculate_order()
+						case 'B':
+							user_choice = 1
+							calculate_order()
+						case 'C':
+							user_choice = 2
+							calculate_order()
+						case 'D':
+							user_choice = 3
+							calculate_order()
+					retry = input("Would you like to try again? (y/n): ")
+					if retry.lower() == 'y':
+						continue
+					elif retry.lower() == 'n':
+						break
+					else:
+						print("Invalid Input")
+						break
+					retry = -99
+
+
+				except ValueError:
+					print("Invalid Choice")
+		case 5: # drinks
+			while True:
+				george.drinks()
+				menu_prices = george.menu_prices
+				try:
+					menu_choice = input("CHOICE: ")
+					match menu_choice.upper():
+						case 'A':
+							user_choice = 0
+							calculate_order()
+						case 'B':
+							user_choice = 1
+							calculate_order()
+						case 'C':
+							user_choice = 2
+							calculate_order()
+						case 'D':
+							user_choice = 3
+							calculate_order()
+					retry = input("Would you like to try again? (y/n): ")
+					if retry.lower() == 'y':
+						continue
+					elif retry.lower() == 'n':
+						break
+					else:
+						print("Invalid Input")
+						break
+					retry = -99
+
+
+				except ValueError:
+					print("Invalid Choice")
